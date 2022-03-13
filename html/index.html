@@ -11,16 +11,16 @@
     <link rel="stylesheet"  href="css/main.css">
   <body>
     
-      <div class="wrapper">
+      
       <div class="hero-img">
         <header>
         <a href="#" class="logo">FELIS <span>CATUS</span></a>
         <nav>
           <img  class="close" src="images\cross.png" alt="close icon">
           <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">gato</a></li>
-            <li><a href="#">felis cauts</a></li>
+            <li><a class="home" href="#">home</a></li>
+            <li><a class="gato" href="#">gato</a></li>
+            <li><a class="catus" href="#">felis cauts</a></li>
           </ul>
         </nav> 
         <svg class="hammenu" viewBox="0 0 100 80" width="40" height="40">
@@ -70,13 +70,16 @@
         const hammenu = document.querySelector('.hammenu')
         const close = document.querySelector('.close')
         const nav = document.querySelector('nav')
-
+        const home = document.querySelector('home')
         hammenu.addEventListener('click',()=>{
           nav.classList.add('open-nav')
         })
         close.addEventListener('click',()=>{
           nav.classList.remove('open-nav')
-        })
+        }) 
+        home.addEventListener('click',()=>{
+          window.location.reload();
+        }) 
 
 
       </script>
